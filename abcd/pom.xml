@@ -4,7 +4,7 @@
   <groupId>com.abcd</groupId>
   <artifactId>abcd</artifactId>
   <packaging>war</packaging>
-  <version>2.0.2-DinteractiveMode=false</version>
+  <version>2.0.2SNAPSHOT-DinteractiveMode=false</version>
   <name>abcd Maven Webapp</name>
   <url>http://maven.apache.org</url>
   <dependencies>
