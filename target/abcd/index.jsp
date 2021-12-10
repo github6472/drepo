@@ -1,7 +1,11 @@
 <!doctype html>
 <html>
 <head>
+<<<<<<< HEAD:target/abcd/index.jsp
     <title>Web Page For Example</title>
+=======
+    <title>Example Domain...!!!</title>
+>>>>>>> 58bc52a40d82a9a25a1a3d4e85810aab0cc78c71:abcd/src/main/webapp/index.jsp
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
