@@ -1,0 +1,4 @@
+success 
+or
+fail 
+the script
