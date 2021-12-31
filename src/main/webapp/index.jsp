@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <title>NS Web Page For Example</title>
+    <title>NS Test Web Page For Example</title>
 
     <meta charset="utf-8" />
     <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
