@@ -5,7 +5,7 @@
 echo "which repo"
 read repo
 cd
-cd dev-data/$repo
+cd /home/coderr/$repo
 
 git status
 
