@@ -14,7 +14,7 @@ pipeline{
         }
 	stage ('code deploy') {
             steps {
-                sh 'sshpass -p "nano6472" scp target/abcd.war 172.17.0.2:/home/dev_data/apache-tomcat-9.0.55/webapps'
+                sh 'sshpass -p "6472" scp target/abcd.war 172.17.0.2:/home/dev_data/apache-tomcat-9.0.55/webapps'
             }
      }
  }
