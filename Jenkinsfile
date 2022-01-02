@@ -14,7 +14,7 @@ pipeline{
         }
 	stage ('code deploy') {
             steps {
-                sh '/home/workspace/.jenkins/workspace/pp_text_master/target/abcd.war root@172.17.0.1 root@172.17.0.2:/home/dev_data/apache-tomcat-9.0.55/webapps'   sshpass -p '6472'
+                sh 'scp /home/workspace/.jenkins/workspace/pp_text_master/target/abcd.war root@172.17.0.1 root@172.17.0.2:/home/dev_data/apache-tomcat-9.0.55/webapps'   sshpass -p '6472'
             }
 	}
     }
