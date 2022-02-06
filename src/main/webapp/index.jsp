@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en-US" class="hide-scroll">
 <head> 
-    <title>Red oval truck transportaion HTML Template Live Demo by NEELUFAR</title>
+    <title>Red oval truck transportaion HTML Template Live Demo by NEELU</title>
     <meta name="Keywords">
     <meta name="Description">
     
