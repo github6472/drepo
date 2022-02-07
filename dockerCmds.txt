@@ -1,0 +1,86 @@
+first writte a Dockerfile for creating a image
+
+# to open file for edit
+vim Dockerfile  
+
+#to build from locally dockerfile
+docker build -t dockerhub-id/label R image-name .  
+
+#cmd for create new container - with detach mode
+docker run -itd --name "container_name" --hostname "container_name" -v /home/workspace/dev-data:/home/workspace/docker_data -p "0000:8080" shaikghouse/myubuntu /bin/bash
+
+#cmd to start an already existing container
+docker start "cont..name"
+
+#to enter into a container
+docker attach "cont..name"
+         R
+docker exec -it cont..name /bin/bash
+
+# base machine to docker root ssh connecting it was just show only ssh transfer files only
+ssh root@172.17.0.5
+
+#to know the ip-Address of container
+docker inspect --format '{{.NetworkSettings.Networks.bridge.Gateway}}' "cont..name"
+
+# same previous container data without changes we get the same image & that container data also get
+docker commit slave1 shaikghouse/myubuntu 
+
+#if we want to get back from container to base machine
+TYPE exit
+   R 
+TYPE ctrl+p+q  
+
+#it was just exit only do u want stop the container run the cmd
+docker stop cont..name
+
+# ???????????
+docker top server to list docker stats
+
+#running container list show 
+docker ps , docker container ls R id ,docker ps -q all R id , 'running docker ps-q' for only up container id shown,
+
+
+#for all container wants to stop R start 
+docker start $(docker ps -q)
+docker stop $(docker ps -q)
+
+#container delete 
+docker kill cont..name
+"note : before u delete u have to stop the container first"
+#all gonna b delete
+docker kill $(docker ps -q) 
+
+docker ps  -a -- filter ancestor=ubuntu all ubuntu images display 
+
+docker ps  -a -- filter name =server =server shown
+
+#docker present running container list
+docker ps  -- filter status= running 
+
+
+#without attach - we get pwd path of container 
+docker exec -it -w /root cont..name pwd
+
+#without attach -we start ssh service of container
+docker exec -it cont..name service ssh start
+
+# ??????
+docker exec -it -w /root cont..name service ssh start
+
+
+#do you want to make R create a file R directory in ccontainer from base machine  
+docker exec -d cont..name touch,mkdir  /home/'$filename'
+
+#container status checking (running or stoped) 1 by 1 namely
+docker inspect --format '{{.State.Status}}' cont..name
+
+#already existing container giving a volume for that 
+docker run -it -v /home/workspace/files:/home/files --name jkdata --hostname jkdata ubuntu:20.04 /bin/bash
+
+# copying (deploying) to container to base machine to container R 'cont.. to cont..'
+docker cp target/crepo.war task6:/home/dev_data/apache-tomcat-9.0.55/webapps
+
+# starting tomcat from base machine 
+docker exec -itd cont..name "/home/dev_data/apache-tomcat-9.0.55/bin/startup.sh" containers tomcat path
+

@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+   deploy:
+      container_name: doc1_yml
+      image: shaikghouse/myubuntu
+      tty: true
+      volumes:
+         - "/home/workspace/dev-data:/home/workspace/dev-data/"
+      ports:
+         - "8031:8080"
+      networks: 
+         - net
+     
+   web:
+      container_name: web_server
+      image: nginx
+      ports:
+         - "90:80"
+      volumes:
+              - cont_data:/home/dataweb
+
+      networks: 
+         - net
+
+   database:
+      container_name: mysql
+      image: mysql
+      tty: true
+      hostname: mysql
+      ports: 
+         - "3306:3306"
+      environment: 
+         - MYSQL_ROOT_PASSWORD=6472
+         - MYSQL_USER=worksql
+         - MYSQL_PASSWORD=6472
+         - MYSQL_DATABASE=mysqldb
+      networks: 
+         - net
+      volumes:
+         - cont_data:/var/lib/mysql
+
+volumes: 
+   cont_data:
+
+
+networks:
+   net:

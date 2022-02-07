@@ -1,4 +1,4 @@
-FROM myubuntu:20.04
+FROM shaikghouse/myubuntu
 RUN apt-get update
 RUN apt-get install openjdk-8-jdk -y
 RUN apt-get install git -y
