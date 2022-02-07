@@ -1,5 +1,11 @@
 first writte a Dockerfile for creating a image
 
+#Dockerfile is create a new image only 
+
+#containers can be created / updated via docker-compose.yml file
+#docker-compose.yml file is creating a new containers & additional changes inside of the  compose.yml file 
+docker compose up
+
 # to open file for edit
 vim Dockerfile  
 
