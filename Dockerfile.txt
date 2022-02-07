@@ -1,10 +1,30 @@
-FROM shaikghouse/myubuntu
+FROM ubuntu:tags=01,latest ,centos, redhat..,
+#from is useful to pic a image from dockerhub
+ 
 RUN apt-get update
+#updating downloded image
+
 RUN apt-get install openjdk-8-jdk -y
+#installing java in the downloded image
+
 RUN apt-get install git -y
+#installing git in the downloded image
+
 RUN apt-get install maven -y
+#installing maven in the downloded image
+
 RUN apt-get install wget -y
+#installing wget in the downloded image 
+#wget is using to run a browser links in the terminal
+
 RUN wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.56/bin/apache-tomcat-9.0.56.tar.gz
+#installing tomcat local server in the downloded image 
+
 RUN tar -zxvf apache-tomcat-9.0.56.tar.gz
+#extracting the tar file f tomcat 
+
 ENTRYPOINT sh apache-tomcat-9.0.56/bin/startup.sh && service ssh start && bash
+#entry point cmd for  service R server start 
+
 RUN apt-get install vim -y
+#installing vim editor for chenging a text R codes 
